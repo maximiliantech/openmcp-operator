@@ -28,7 +28,7 @@ import (
 	"github.com/openmcp-project/openmcp-operator/internal/controllers/scheduler"
 )
 
-var scheme = install.InstallOperatorAPIsPlatform(runtime.NewScheme())
+var scheme = install.InstallCRDAPIs(install.InstallOperatorAPIsPlatform(runtime.NewScheme()))
 
 // defaultTestSetup initializes a new environment for testing the scheduler controller.
 // Expected folder structure is a 'config.yaml' file next to a folder named 'cluster' containing the manifests.
